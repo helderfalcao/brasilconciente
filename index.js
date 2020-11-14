@@ -40,7 +40,7 @@ app.get('/sync/betim', (req, res) => {
 })
 
 app.get('/list/betim', (req, res) => {
-    Politicians.find().limit(10).then(result => {
+    Politicians.find().then(result => {
         res.json(
             {size: result.length,
                 data: result});
